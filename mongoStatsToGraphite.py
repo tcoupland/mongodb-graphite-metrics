@@ -46,8 +46,8 @@ def uploadToCarbon(metrics):
   except:
     print "Couldn't connect to %(server)s on port %(port)d, is carbon-agent.py running?" % { 'server': carbonHost, 'port': carbonPort}
     sys.exit(1)
-  print message
-  #sock.sendall(message)
+  #print message
+  sock.sendall(message)
 
 def calculateLagTimes(replStatus, primaryDate):
   lags = dict()
